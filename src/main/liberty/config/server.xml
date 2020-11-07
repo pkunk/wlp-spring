@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<server description="Sample Liberty server">
+    <featureManager>
+        <feature>servlet-4.0</feature>
+    </featureManager>
+
+    <variable name="default.http.port" defaultValue="9080"/>
+    <variable name="default.https.port" defaultValue="9443"/>
+
+    <webContainer />
+
+    <webApplication location="wlp-0.0.1.war" contextRoot="/wlp" />
+    <httpEndpoint host="*" httpPort="${default.http.port}"
+                  httpsPort="${default.https.port}" id="defaultHttpEndpoint"/>
+
+</server>
